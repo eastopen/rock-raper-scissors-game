@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4ouqgd8hrw6i"]
+
+[ext_resource type="Script" path="res://script/characters.gd" id="1_el6u6"]
+[ext_resource type="Texture2D" uid="uid://dul5di52e4eej" path="res://image/scissors.png" id="1_v15tl"]
+[ext_resource type="Shape2D" uid="uid://bkynf0mbwc1fm" path="res://shape/node_shape.tres" id="2_g14ve"]
+
+[node name="Area" type="Area2D"]
+script = ExtResource("1_el6u6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_v15tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = ExtResource("2_g14ve")

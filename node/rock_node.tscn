@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1dibnrf2bl2q"]
+
+[ext_resource type="Script" path="res://script/characters.gd" id="1_i1opf"]
+[ext_resource type="Texture2D" uid="uid://cy1e0v61fkx7q" path="res://image/rock.png" id="1_sgudu"]
+[ext_resource type="Shape2D" uid="uid://bkynf0mbwc1fm" path="res://shape/node_shape.tres" id="2_cr8bi"]
+
+[node name="Area" type="Area2D"]
+script = ExtResource("1_i1opf")
+character_type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_sgudu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = ExtResource("2_cr8bi")

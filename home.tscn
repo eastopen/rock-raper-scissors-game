@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://k08y1b2821yh"]
+
+[ext_resource type="Script" path="res://script/main.gd" id="1_vi7cn"]
+[ext_resource type="PackedScene" uid="uid://piudjrd33w4y" path="res://node/paper_node.tscn" id="2_r8ceu"]
+[ext_resource type="PackedScene" uid="uid://d1dibnrf2bl2q" path="res://node/rock_node.tscn" id="3_jmye0"]
+[ext_resource type="PackedScene" uid="uid://b4ouqgd8hrw6i" path="res://node/scissors_node.tscn" id="4_h7nvw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u0bos"]
+font_size = 32
+
+[node name="Home" type="Node2D"]
+position = Vector2(800, 450)
+script = ExtResource("1_vi7cn")
+
+[node name="Count" type="Label" parent="."]
+offset_left = -768.0
+offset_top = -411.0
+offset_right = -518.0
+offset_bottom = -348.0
+label_settings = SubResource("LabelSettings_u0bos")
+
+[node name="VictoryPopup" type="Popup" parent="."]
+initial_position = 1
+size = Vector2i(436, 500)
+
+[node name="Label" type="Label" parent="VictoryPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -28.5
+offset_right = 145.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "不知道谁 获胜了"
+horizontal_alignment = 1
+
+[node name="PaperNode" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(-235, 362)
+
+[node name="PaperNode2" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(-296, -24)
+
+[node name="PaperNode3" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(60, -369)
+
+[node name="RockNode" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(510, -259)
+
+[node name="RockNode2" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(-483, 54)
+
+[node name="RockNode3" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(-266, -308)
+
+[node name="ScissorsNode" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(222, -19)
+
+[node name="ScissorsNode2" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(232, -201)
+
+[node name="ScissorsNode3" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(-83, -199)
+
+[node name="PaperNode4" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(725, -377)
+
+[node name="PaperNode5" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(436, 143)
+
+[node name="RockNode4" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(16, 133)
+
+[node name="RockNode5" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(-497, 293)
+
+[node name="ScissorsNode4" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(64, 310)
+
+[node name="ScissorsNode5" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(-543, -88)
+
+[node name="RockNode6" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(231, -387)
+
+[node name="PaperNode6" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(-538, -288)
+
+[node name="ScissorsNode6" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(-583, 140)
+
+[node name="ScissorsNode7" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(702, 359)
+
+[node name="RockNode7" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(694, 186)
+
+[node name="PaperNode7" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(-718, 1)
+
+[node name="ScissorsNode8" parent="." instance=ExtResource("4_h7nvw")]
+position = Vector2(-632, 392)
+
+[node name="RockNode8" parent="." instance=ExtResource("3_jmye0")]
+position = Vector2(511, 346)
+
+[node name="PaperNode8" parent="." instance=ExtResource("2_r8ceu")]
+position = Vector2(419, -76)
